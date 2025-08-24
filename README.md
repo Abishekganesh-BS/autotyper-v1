@@ -1,17 +1,24 @@
 
-# Auto Typer (Keyboard Automation)
+# Auto Typer Pro (Keyboard Automation with Loops)
 
-This is a simple **keyboard automation script** built with [pynput](https://pypi.org/project/pynput/).
-It allows you to automatically type and submit a given word repeatedly by pressing a hotkey.
+This script is an **auto-typing tool** built using [pynput](https://pypi.org/project/pynput/).
+It allows you to automatically type text with two different loop modes:
+
+* **Continuous mode** → repeats indefinitely until stopped.
+* **Limited mode** → repeats for a set number of times.
 
 ---
 
 ## ✨ Features
 
-* Automatically types and submits a word at a given time interval.
 * Start automation with **F2**.
 * Stop automation with **ESC**.
-* Customizable text input and time interval.
+* Choose between:
+
+  * **Continuous loop (C)** → text is typed indefinitely until stopped.
+  * **Limited loop (L)** → text is typed a specified number of times.
+* Adjustable **time spacing** between each typing.
+* Supports any custom text input.
 
 ---
 
@@ -20,7 +27,7 @@ It allows you to automatically type and submit a given word repeatedly by pressi
 * Python 3.x
 * [`pynput`](https://pypi.org/project/pynput/)
 
-Install dependencies:
+Install with:
 
 ```bash
 pip install pynput
@@ -33,50 +40,51 @@ pip install pynput
 1. Run the script:
 
    ```bash
-   python auto_typer.py
+   python auto_typer_pro.py
    ```
-2. Enter the **word** you want the script to repeatedly type.
-3. Enter the **time interval** (in seconds) between each repetition.
-4. Press **F2** to start typing.
-5. Press **ESC** to stop typing.
+2. Choose loop type:
 
----
-
-## ⚠️ Notes
-
-* The script will continue typing until you press **ESC**.
-* Use this responsibly (e.g., don’t spam in chats, games, or platforms where it might be considered abuse).
+   * `C` → Continuous loop
+   * `L` → Limited loop
+3. Enter the text you want typed.
+4. Enter the time interval (seconds) between each repetition.
+5. If you chose **Limited loop**, enter the number of times it should repeat.
+6. Press **F2** to start typing.
+7. Press **ESC** to stop typing.
 
 ---
 
 ## 📖 Example
 
 ```text
-This code is made by Abishek Ganesh
-To know How to use, click 'More-info'
-Version: 0.00.01(Alpha)
-
-===========================================
-Word: hello
-Time: 2
+Loop Type: L
+Text: Hello World
+Time-Space: 2
+Repeating Limits: 5
 ```
 
-➡️ Now press **F2**, and every 2 seconds the script will type `hello` and press Enter.
-➡️ Press **ESC** to stop.
+➡️ When **F2** is pressed, the script will type `Hello World` every 2 seconds, exactly 5 times.
+➡️ If **C** is chosen instead, it will continue indefinitely until **ESC** is pressed.
+
+---
+
+## ⚠️ Notes
+
+* Always test in a safe environment (like a text editor) before using.
+* Using this in online platforms, games, or chats may violate their terms of service. Use responsibly.
 
 ---
 
 ## 🛠️ Future Improvements
 
+* Add hotkey customization.
+* Add a pause/resume feature (instead of just stop).
 * GUI for easier control.
-* Multiple word inputs.
-* Option to choose different hotkeys.
 
 ---
 
 ## 👨‍💻 Author
 
 Made by **Abishek Ganesh**
-Version: `1 `
-
+Version: `0.00.02 (Alpha)`
 
