@@ -4,38 +4,65 @@ import time
 
 
 flag = False
+guide = False
+
 def on_press(key):
     global flag
+    global guide
     if key == keyboard.Key.f2:
         flag = True
+    elif key == keyboard.Key.f4:
+        guide = True
+
 
 def on_release(key):
     global flag
+    global guide
     if key == keyboard.Key.esc:
         flag = False
         
 listener = keyboard.Listener(on_press=on_press,on_release=on_release)
 controller = keyboard.Controller()
-print("This code is made by Abishek Ganesh")
-print("To know How to use, click 'More-info'")
-print("Version: 0.00.01(Alpha) \n")
-print("===========================================")
-word = input("Word: ")
-b = eval(input("Time: "))
+
+
+    
+l = input("Loop Type: ")
+w = input("Text: ")
+t = float(input("Time-Space: "))
+
+
 
 
 listener.start()
 
-while True:
-    while flag:
-        controller.type(word)
-        controller.press(Key.enter) 
-        controller.release(Key.enter)
-        time.sleep(b)
+if l == "C" or l == "c":
+    while True:
+        while flag:
+            controller.type(w)
+            time.sleep(0.1)
 
-#while True:
-    #while flag:
-        #controller.type(word)
-        #controller.press(Key.enter)
-        #controller.release(Key.enter)
-        #time.sleep(b)
+            time.sleep(t)
+            
+
+elif l == "L" or l == "l":
+    RT = int(input("Repeating Limits: "))
+    i = 0
+    while True:
+        if i == RT:
+            break
+        else:
+            while flag:
+                if i == RT :
+                    break
+                else:
+                    controller.type(w)
+                    time.sleep(0.1)
+
+                    time.sleep(t)
+                    i +=1
+                
+        
+    
+    
+
+
