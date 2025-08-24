@@ -86,5 +86,5 @@ Repeating Limits: 5
 ## 👨‍💻 Author
 
 Made by **Abishek Ganesh**
-Version: `0.00.02 (Alpha)`
+Version: `2`
 
